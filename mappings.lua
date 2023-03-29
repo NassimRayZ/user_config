@@ -4,7 +4,7 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
+   -- first key is the mode
    n = {
       -- second key is the lefthand side of the map
       -- mappings seen under group name "Buffer"
@@ -12,14 +12,14 @@ return {
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
-      ["bp"] = {"<cmd>bprev<cr>", desc="Navigate to previous buffer"},
-      ["bn"] = {"<cmd>bnext<cr>", desc="Navigate to next buffer"}
+      ["bp"] = { "<cmd>bnext<cr>", desc = "Navigate to previous buffer" },
+      ["bn"] = { "<cmd>bprev<cr>", desc = "Navigate to next buffer" }
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    },
-    t = {
+   },
+   t = {
       -- setting a mapping to false will disable it
-      ["<esc><esc>"] = { "<c-\\><c-n>", desc="Command mode from terminal"},
-    },
+      ["<esc><esc>"] = { "<c-\\><c-n>", desc = "Command mode from terminal" },
+   },
 }
 
