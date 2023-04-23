@@ -17,20 +17,18 @@ return {
   {
     "goolord/alpha-nvim",
     config = function(plugin, opts)
-      require "plugins.configs.alpha" (plugin, opts)
+      require "plugins.configs.alpha"(plugin, opts)
 
       vim.api.nvim_create_autocmd("UIEnter", {
         callback = function()
           local stats = require("lazy").stats()
           local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
-          opts.section.footer.val =
-          { " ", " ", " ", "loaded " .. stats.count .. " plugins   in " .. ms .. "ms" }
+          opts.section.footer.val = { " ", " ", " ", "loaded " .. stats.count .. " plugins   in " .. ms .. "ms" }
           opts.section.footer.opts.hl = "DashboardFooter"
         end,
       })
     end,
-  }
-
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
